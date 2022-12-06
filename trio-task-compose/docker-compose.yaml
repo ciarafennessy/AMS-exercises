@@ -1,18 +1,21 @@
 version: "3.8"
 services:
-  mysql:
+  flask-db:
     build: ./db
+    container_name: mysql
     ports:
     - target: 3306
     protocol: tcp
   flask-app:
-    build: ./flask-app
+    build: ./flask-app/
+    container_name: flask-app
     ports:
     - target: 5000
       published: 5000
       protocol: tcp
   nginx:
     image: nginx:latest
+    container_name: nginx
     ports:
     - target: 80
       published: 80
