@@ -6,6 +6,6 @@ FROM python:3.6
 # install pip dependencies from requirements file
  RUN pip install -r requirements.txt
 # Expose correct port
-5000
+EXPOSE 5000
 # Create an entrypoint
 ENTRYPOINT ["python","app.py"]
