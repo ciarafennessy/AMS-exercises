@@ -1,5 +1,10 @@
 version: "3.8"
 services:
+  mysql:
+    build: ./db
+    ports:
+    - target: 3306
+    protocol: tcp
   flask-app:
     build: ./flask-app
     ports:
