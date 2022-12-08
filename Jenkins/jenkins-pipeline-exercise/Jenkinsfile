@@ -6,7 +6,7 @@ pipeline{
         stages{
             stage('Clone Directory'){
                 steps{
-                    sh "git clone https://gitlab.com/qacdevops/chaperootodo_client"
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://gitlab.com/qacdevops/chaperootodo_client']]])
                 }
             }
             stage('Install Docker'){
