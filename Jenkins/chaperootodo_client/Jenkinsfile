@@ -20,7 +20,7 @@ pipeline{
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            docker.withRegistry('https://registry.hub.docker.com', 'ciarafennessy'){
+                            docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-username-password'){
                                 image.push("${env.app_version}")
                             }
                         }
