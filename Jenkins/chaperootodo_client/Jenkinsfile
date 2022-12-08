@@ -7,7 +7,7 @@ pipeline{
         stages{
             stage('Build Image'){
                 steps{
-                    dir('Jenkins/chaperootodo-client') {
+                    dir('Jenkins/chaperootodo_client') {
                     script{
                         if (env.rollback == 'false'){
                             image = docker.build("ciarafennessy/chaperoo-frontend")
