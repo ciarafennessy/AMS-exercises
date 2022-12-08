@@ -29,7 +29,7 @@ pipeline{
             }
             stage('Deploy App'){
                 steps{
-                    sh "docker-compose -f Jenkins/chapertoodo_client/docker-compose.yaml pull && docker-compose -f Jenkins/chapertoodo_client/docker-compose.yaml up -d"
+                    sh "docker-compose -f Jenkins/chapertodo_client/docker-compose.yaml pull && docker-compose -f Jenkins/chapertodo_client/docker-compose.yaml up -d"
                 }
             }
         }
