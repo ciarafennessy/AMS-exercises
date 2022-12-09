@@ -1,0 +1,36 @@
+pipeline{
+        agent any
+        environment {
+            app_version = 'v1'
+            rollback = 'true'
+        }
+        stages{
+            stage('Build Image'){
+                steps{
+                    dir('Jenkins/chaperootodo_client') {
+                    script{
+                        if (env.rollback == 'false'){
+                            image = docker.build("ciarafennessy/chaperoo-frontend")
+                        }
+                    }
+                    }
+                }
+            }
+            stage('Tag & Push Image'){
+                steps{
+                    script{
+                        if (env.rollback == 'false'){
+                            docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-username-password'){
+                                image.push("${env.app_version}")
+                            }
+                        }
+                    }
+                }
+            }
+            stage('Deploy App'){
+                steps{
+                    sh "docker-compose -f Jenkins/chaperootodo_client/docker-compose.yaml pull && docker-compose -f Jenkins/chaperootodo_client/docker-compose.yaml up -d"
+                }
+            }
+        }
+}
