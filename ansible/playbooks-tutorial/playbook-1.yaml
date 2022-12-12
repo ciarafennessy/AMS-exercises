@@ -16,6 +16,8 @@
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
+    # when: nginx_config.src == nginx_config.dest 
+    # failed_when: nginx_config.diff.before.path == nginx_config.diff.after.path
  
 
   - name: Restart nginx if needed
