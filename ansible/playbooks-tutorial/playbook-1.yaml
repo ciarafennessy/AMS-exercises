@@ -14,6 +14,7 @@
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
+    failed_when: nginx_config.changed == false
 
   - name: Restart nginx if needed
     service:
