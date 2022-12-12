@@ -3,8 +3,8 @@
   become: true
   tasks:
 
-  -name: uninstall nginx
-  apt:
-    name: nginx
-    state: present
-    update_cache: true
+  - name: uninstall nginx
+    apt:
+      name: nginx
+      state: present
+      update_cache: true
