@@ -2,21 +2,18 @@
   connection: local
   become: true
   tasks:
+
   - name: install nginx
     apt:
       name: nginx
       state: present
       update_cache: true
-    register: nginx_config
-    register: nginx_var
+    #register: nginx_config
+    #register: nginx_var
 
-   - name: "Print information from 'Copy nginx file over'"
-    debug:
-        msg: "{{ nginx_ }}"
-
-  - name: "Print information from 'Copy nginx file over'"
-    debug:
-        msg: "{{ nginx_config }}"
+  #- name: "Print information from 'Copy nginx file over'"
+   # debug:
+    #    msg: "{{ nginx_config }}"
 
   - name: Copy nginx file over
     copy:
@@ -26,12 +23,14 @@
     #when: nginx_config.diff.before.path == nginx_config.diff.after.path
     #failed_when: nginx_config.diff.before.path == nginx_config.diff.after.path
 
-    
-
   - name: Restart nginx if needed
     service:
       name: nginx
       state: restarted
     when: nginx_config.changed == true
+
+  - name: "Print information from 'Copy nginx file over'"
+    debug:
+      msg: "{{ nginx_config }}"
 
  
