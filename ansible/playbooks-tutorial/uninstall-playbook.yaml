@@ -1,9 +1,9 @@
 - hosts: localhost
-connection: local
-become: true
-tasks:
+  connection: local
+  become: true
+  tasks:
 
--name: uninstall nginx
+  -name: uninstall nginx
   apt:
-  name: nginxstate: present
-  update_cache: true
+    name: nginxstate: present
+    update_cache: true
