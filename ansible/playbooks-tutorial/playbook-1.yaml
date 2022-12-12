@@ -8,12 +8,7 @@
       name: nginx
       state: present
       update_cache: true
-    #register: nginx_config
-    #register: nginx_var
-
-  #- name: "Print information from 'Copy nginx file over'"
-   # debug:
-    #    msg: "{{ nginx_config }}"
+    failed_when: cache_update_time = 1
 
   - name: Copy nginx file over
     copy:
@@ -29,6 +24,7 @@
       state: restarted
     when: nginx_config.changed == true
 
+# Use the debug module to show the information from the "Copy nginx file over" task
   - name: "Print information from 'Copy nginx file over'"
     debug:
       msg: "{{ nginx_config }}"
