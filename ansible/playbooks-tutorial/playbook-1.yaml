@@ -8,8 +8,8 @@
       name: nginx
       state: present
       update_cache: true
-    failed_when: 
-    - cache_update_time = 1
+    register: installvar
+    failed_when: installvar.cache_update_time > 1
 
   - name: Copy nginx file over
     copy:
