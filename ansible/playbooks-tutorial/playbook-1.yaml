@@ -9,7 +9,6 @@
       update_cache: true
 
   - name: Copy nginx file over
-    debug:
     copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
@@ -21,3 +20,7 @@
       name: nginx
       state: restarted
     when: nginx_config.changed == true
+
+  - name: "Print information from 'Copy nginx file over'"
+      debug:
+        msg: "{{ nginx_config }}"
