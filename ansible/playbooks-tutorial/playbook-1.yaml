@@ -7,7 +7,7 @@
       name: nginx
       state: present
       update_cache: true
-    register: nginx_info
+    register: nginx_config
 
   - name: "Print information from 'Copy nginx file over'"
     debug:
