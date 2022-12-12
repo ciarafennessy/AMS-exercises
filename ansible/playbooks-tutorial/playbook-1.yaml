@@ -18,8 +18,8 @@
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
-    when: nginx_config.diff.before.path == nginx_config.diff.after.path
-    failed_when: nginx_config.diff.before.path == nginx_config.diff.after.path
+    #when: nginx_config.diff.before.path == nginx_config.diff.after.path
+    #failed_when: nginx_config.diff.before.path == nginx_config.diff.after.path
 
     
 
