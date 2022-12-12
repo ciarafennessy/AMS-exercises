@@ -9,6 +9,10 @@
       update_cache: true
     register: nginx_info
 
+  - name: "Print information from 'Copy nginx file over'"
+    debug:
+        msg: "{{ nginx_config }}"
+
   - name: Copy nginx file over
     copy:
       src: nginx.conf
@@ -22,6 +26,4 @@
       state: restarted
     when: nginx_config.changed == true
 
-  - name: "Print information from 'Copy nginx file over'"
-      debug:
-        msg: "{{ nginx_config }}"
+ 
