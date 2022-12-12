@@ -8,6 +8,11 @@
       state: present
       update_cache: true
     register: nginx_config
+    register: nginx_var
+
+   - name: "Print information from 'Copy nginx file over'"
+    debug:
+        msg: "{{ nginx_ }}"
 
   - name: "Print information from 'Copy nginx file over'"
     debug:
