@@ -9,6 +9,7 @@
       update_cache: true
 
   - name: Copy nginx file over
+    debug:
     copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
