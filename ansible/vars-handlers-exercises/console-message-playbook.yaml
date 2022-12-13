@@ -6,4 +6,4 @@
   - name: print message to host
     debug:
       msg: " Ubuntu System "
-      when: host_os == Ubuntu
+      when: "host_os == 'Ubuntu'"
