@@ -2,8 +2,8 @@ all:
   children:
     test:
       hosts:
-        ec2-3.9.23.175.eu-west-2.compute.amazonaws.com:
-        ec2-35.177.110.151.eu-west-2.compute.amazonaws.com:
+        ip-172-31-42-239.eu-west-2.compute.internal:
+        ip-172-31-40-149.eu-west-2.compute.internal:
       vars: 
         ansible_user: ubuntu
         ansible_private_key: '~/ansible_id'
