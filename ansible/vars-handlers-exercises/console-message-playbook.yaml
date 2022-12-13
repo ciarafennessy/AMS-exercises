@@ -1,0 +1,9 @@
+- hosts: localhost
+  vars:
+    host_os: "{{ ansible_distribution }}"
+
+  tasks:
+  - name: print message to host
+    debug:
+      msg: " Ubuntu System "
+    when: "host_os == 'Ubuntu'"

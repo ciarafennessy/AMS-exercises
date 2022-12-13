@@ -1,0 +1,10 @@
+- hosts: all
+  vars:
+    host_ip: "{{ inventory_hostname}}"
+
+  tasks:
+
+  - name: file with host IP
+    copy:
+      content: "{{ host_ip }}"
+      dest: ~/ip-address

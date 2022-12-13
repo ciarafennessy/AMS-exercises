@@ -1,0 +1,8 @@
+- hosts: all
+  tasks:
+  - name: clone repo
+    git:
+      repo: https://github.com/ciarafennessy/ciarafennessy.git
+      dest: ~/repos
+      clone: yes
+      update: yes
