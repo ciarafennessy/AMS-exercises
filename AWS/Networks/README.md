@@ -22,3 +22,8 @@
 
 <img width="1440" alt="Screenshot 2022-12-15 at 14 41 43" src="https://user-images.githubusercontent.com/116156151/207889536-5f2b38a2-31fc-429f-ab5c-8a072168cff9.png">
 
+# Created route via CLI
+
+<img width="1389" alt="Screenshot 2022-12-15 at 14 51 43" src="https://user-images.githubusercontent.com/116156151/207892195-8648d2b8-1e58-4dc4-bf53-bedcc3d1da65.png">
+
+
