@@ -9,3 +9,7 @@
 # Created Internet Gateway via Console
 
 <img width="1440" alt="Screenshot 2022-12-15 at 14 17 24" src="https://user-images.githubusercontent.com/116156151/207884092-3f886fa1-7eea-4b66-9a40-5a0ff7e59723.png">
+
+# Created Route Table via Console
+
+<img width="1440" alt="Screenshot 2022-12-15 at 14 31 04" src="https://user-images.githubusercontent.com/116156151/207887139-e8e87414-a938-4d99-9c66-63c9e0cbc84c.png">
