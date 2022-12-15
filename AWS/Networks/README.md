@@ -17,3 +17,8 @@
 # Launched new instance on the new subnet via the CLI
 
 <img width="1440" alt="Screenshot 2022-12-15 at 14 40 19" src="https://user-images.githubusercontent.com/116156151/207889339-c167a331-4859-40f1-be8a-1b0e62870bfa.png">
+
+## Shown below running in the console
+
+<img width="1440" alt="Screenshot 2022-12-15 at 14 41 43" src="https://user-images.githubusercontent.com/116156151/207889536-5f2b38a2-31fc-429f-ab5c-8a072168cff9.png">
+
