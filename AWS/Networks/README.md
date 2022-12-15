@@ -13,3 +13,7 @@
 # Created Route Table via Console
 
 <img width="1440" alt="Screenshot 2022-12-15 at 14 31 04" src="https://user-images.githubusercontent.com/116156151/207887139-e8e87414-a938-4d99-9c66-63c9e0cbc84c.png">
+
+# Launched new instance on the new subnet via the CLI
+
+<img width="1440" alt="Screenshot 2022-12-15 at 14 40 19" src="https://user-images.githubusercontent.com/116156151/207889339-c167a331-4859-40f1-be8a-1b0e62870bfa.png">
