@@ -25,5 +25,9 @@
 # Now public can view Moby Dick!
 <img width="1440" alt="Screenshot 2022-12-15 at 11 07 26" src="https://user-images.githubusercontent.com/116156151/207844060-6a88881b-2041-4439-bec7-45b2f35b05df.png">
 
+# Deleted file and buckets on CLI
+
+<img width="1440" alt="Screenshot 2022-12-15 at 11 54 29" src="https://user-images.githubusercontent.com/116156151/207853196-e802bfb4-ac29-4888-9561-449f86a717d7.png">
+
 
 
