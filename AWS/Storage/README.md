@@ -17,3 +17,13 @@
 
 
 <img width="1440" alt="Screenshot 2022-12-15 at 10 14 55" src="https://user-images.githubusercontent.com/116156151/207834589-ba3fd850-9a7f-446e-9359-70293640506c.png">
+
+# Edited Permissions to add policy
+
+<img width="1440" alt="Screenshot 2022-12-15 at 11 04 26" src="https://user-images.githubusercontent.com/116156151/207843740-26fb77ff-a04b-43bd-bcfb-f5bc02d62145.png">
+
+# Now public can view Moby Dick!
+<img width="1440" alt="Screenshot 2022-12-15 at 11 07 26" src="https://user-images.githubusercontent.com/116156151/207844060-6a88881b-2041-4439-bec7-45b2f35b05df.png">
+
+
+
