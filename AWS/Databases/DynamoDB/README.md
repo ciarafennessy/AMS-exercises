@@ -8,19 +8,19 @@
 
  227  aws dynamodb put-item --table-name Movies --item file://movies.json <br>
   228  cat << EOF > movies.json <br>
-  239  {
-  230      "MovieName": {"S": "Avengers Assemble"},
-  231      "MovieYear": {"S": "2012"}
-  232  }
-  233  EOF
-  234  aws dynamodb put-item --table-name Movies --item file://movies.json
-  235  aws dynamodb describe-table --table-name Movies
-  236  aws dynamodb get-item --table-name Movies --key file://movies.json
-  237  aws dynamodb scan --table-name Movies  
-  238  cat << EOF > movies.json
-  239  {
-  240      "MovieName": {"S": "Avengers Assemble"},
-  241      "MovieYear": {"S": "2012"}
-  242  }
-  243  EOF
+  239  {<br>
+  230      "MovieName": {"S": "Avengers Assemble"},<br>
+  231      "MovieYear": {"S": "2012"}<br>
+  232  }<br>
+  233  EOF<br>
+  234  aws dynamodb put-item --table-name Movies --item file://movies.json<br>
+  235  aws dynamodb describe-table --table-name Movies<br>
+  236  aws dynamodb get-item --table-name Movies --key file://movies.json<br>
+  237  aws dynamodb scan --table-name Movies  <br>
+  238  cat << EOF > movies.json<br>
+  239  {<br>
+  240      "MovieName": {"S": "Avengers Assemble"},<br>
+  241      "MovieYear": {"S": "2012"}<br>
+  242  }<br>
+  243  EOF<br>
   244 aws dynamodb delete-table --table-name Movies
