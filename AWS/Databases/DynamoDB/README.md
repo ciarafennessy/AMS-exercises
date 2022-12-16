@@ -6,8 +6,8 @@
 
 ## Commands run:
 
- 227  aws dynamodb put-item --table-name Movies --item file://movies.json
-  228  cat << EOF > movies.json
+ 227  aws dynamodb put-item --table-name Movies --item file://movies.json <br>
+  228  cat << EOF > movies.json <br>
   239  {
   230      "MovieName": {"S": "Avengers Assemble"},
   231      "MovieYear": {"S": "2012"}
