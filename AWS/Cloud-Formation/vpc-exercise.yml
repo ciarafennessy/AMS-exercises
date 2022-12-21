@@ -2,12 +2,14 @@ Resources:
   CFvpc:
     Type: AWS::EC2::VPC
     Properties:
-      CidrBlock: 100.0.0.0/16
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+      InstanceTenancy: default
   CFsubnet:
     Type: AWS::EC2::Subnet
     Properties:
-      CidrBlock: 100.0.0.0/24
-      MapPublicIpOnLaunch: true
+      CidrBlock: 10.0.0.0/24
       VpcId: !Ref CFvpc
   CFsecuritygroup:
     Type: AWS::EC2::SecurityGroup
@@ -21,10 +23,6 @@ Resources:
         CidrIp: 0.0.0.0/0
   CFinternetgateway:
     Type: AWS::EC2::InternetGateway
-    Properties:
-      Tags:
-      - Key: Foo
-        Value: Bar
   CFigattach:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
