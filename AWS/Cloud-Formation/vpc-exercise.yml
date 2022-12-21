@@ -1,0 +1,56 @@
+Resources:
+  CFvpc:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+      InstanceTenancy: default
+  CFsubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.0.0.0/24
+      VpcId: !Ref CFvpc
+  CFsecuritygroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: SSH
+      VpcId: !Ref CFvpc
+      SecurityGroupIngress:
+        IpProtocol: tcp
+        FromPort: "22"
+        ToPort: "22"
+        CidrIp: 0.0.0.0/0
+  CFinternetgateway:
+    Type: AWS::EC2::InternetGateway
+  CFigattach:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId: !Ref CFinternetgateway
+      VpcId: !Ref CFvpc
+  CFrtb:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref CFvpc
+  CFrtbAssoc:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref CFrtb
+      SubnetId: !Ref CFsubnet
+  CFigRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref CFinternetgateway
+      RouteTableId: !Ref CFrtb
+  CFinstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      KeyName: DemoKey
+      SubnetId: !Ref CFsubnet
+      SecurityGroupIds:
+        - !Ref CFsecuritygroup
+      ImageId: ami-077e1fcadbe9a9282
+      InstanceType: t2.micro
+
+
