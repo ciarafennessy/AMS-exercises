@@ -15,7 +15,7 @@
 
 <img width="1440" alt="Screenshot 2022-12-21 at 11 55 59" src="https://user-images.githubusercontent.com/116156151/208900781-ca60fea6-7c46-4c2d-83ee-0ceb0bcc7406.png">
 
-# Instance Visible in Console
+# Route Table Visible in Console
 
 <img width="1440" alt="Screenshot 2022-12-21 at 11 56 39" src="https://user-images.githubusercontent.com/116156151/208900892-6bb7b7d9-beb1-4a77-9c3f-5012aa858ef6.png">
 
@@ -24,7 +24,7 @@
 <img width="1440" alt="Screenshot 2022-12-21 at 11 56 51" src="https://user-images.githubusercontent.com/116156151/208900960-15f5c3b9-7efd-4b71-96cd-d4ccf3f98a6b.png">
 
 
-# Route Table Visible in Console
+# Instance Visible in Console
 
 <img width="1440" alt="Screenshot 2022-12-21 at 11 53 32" src="https://user-images.githubusercontent.com/116156151/208900445-1c13b196-75f5-4048-9c08-c7308f73cd07.png">
 <img width="1440" alt="Screenshot 2022-12-21 at 11 53 36" src="https://user-images.githubusercontent.com/116156151/208900482-3b1b381c-8b7e-4455-b3b7-12b7d97e28cd.png">
