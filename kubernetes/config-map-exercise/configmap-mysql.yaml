@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-init
+data:
+  film.sql:
+    USE k8s_db;
+    CREATE TABLE IF NOT EXISTS film_table (
+      id INT PRIMARY KEY AUTO_INCREMENT,
+      title VARCHAR(20) NOT NULL,
+      year FLOAT NOT NULL
+     );
+     
+     INSERT INTO k8s_table(title, year) VALUES
+     ("The Godfather", 1972),
+     ("Dead Poets Scoiety", 1989),
+     ("The Banshees of Inisherin", 2022),
+     ("Legally Blonde", 2001),
+     ("American Beauty", 2000);
